@@ -10,3 +10,7 @@ JSON Blob was created to help parallelize client/server development. Mock JSON r
 To run json blob run the following command.
 
 `docker run -d -p 8080:8080 bytecodehq/jsonblob:latest`
+
+To persist the saved blobs you can mount local volumes on to `/opt/jsonblobs/`
+
+`docker run -d -p 8080:8080 -v /tmp/jsonblobs/:/opt/jsonblobs/ bytecodehq/jsonblob:latest`
